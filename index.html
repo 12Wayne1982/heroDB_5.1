@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <title>Superhero Database</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center bg-success text-white">
+      <h2>SUPERHERO DATABASE</h2>
+      <h4> Insert, Update & Delete Superheroes</h4>
+    </div>
+
+    <div><h3 id="form-title">Add A New Hero</h3></div>
+    <!-- Eingabe: Name, Contact No, Alt Contact No  -->
+    <!-- form-row 1 -->
+    <div class="form-row">
+      <!-- input: Name, ID -->
+      <div class="col-md-3">
+        <label>Name<span class="errdiv"> *</span></label>
+        <input id="txtName" type="text" class="form-control txt txtName" placeholder="Enter Name" required>
+        <input id="txtId" type="hidden" class="form-control txt">
+      </div>
+      <!-- input: Alter Ego -->
+      <div class="col-md-3">
+        <label>Alter Ego<span class="errdiv"> *</span></label>
+        <input id="txtAlterEgo" type="text" class="form-control txt txtAlterEgo" placeholder="Enter Alter Ego" required>
+      </div>
+      <!-- input: Publisher -->
+      <div class="col-md-3">
+        <label>Publisher<span class="errdiv"> *</span></label>
+        <input id="txtPublisher" type="text" class="form-control txt txtPublisher" placeholder="Enter Publisher" required>
+      </div>
+    </div>
+
+    <!-- form-row 2 -->
+    <div class="form-row">
+      <!-- input: First Appearence -->
+      <div class="col-md-3 col-sm-6 col-6">
+        <label>First Appearence<span class="errdiv"> *</span></label>
+        <input id="txtFirstAppearence" data-type="number" type="text" minlength="10" maxlength="10"
+          class="form-control txt txtFirstAppearence" placeholder="Enter First Appearence" required>
+      </div>
+      <!-- input: Publishing Year -->
+      <div class="col-md-3 col-sm-6 col-6">
+        <label>Publishing Year<span class="errdiv"> *</span></label>
+        <input id="txtPublishingYear" data-type="number" type="text" minlength="10" maxlength="10"
+          class="form-control txt txtPublishingYear" placeholder="Enter Publishing Year" required>
+      </div>
+      <!-- input: Created By -->
+      <div class="col-md-3">
+        <label>Created By<span class="errdiv"> *</span></label>
+        <input id="txtCreatedBy" type="text" class="form-control txt txtCreatedBy" placeholder="Enter Created By" required>
+      </div>
+    </div>
+    
+
+    <!-- Buttons -->
+    <div class="row pt-2">
+      <div class="col-md-2">
+        <button type="button" class="btn btn-success" id="btnSave">Save</button>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-secondary" id="btnClear">Clear</button>
+      </div>
+    </div>
+
+    <!-- Table-Container: Beginn -->
+    <div class="row pt-3 table-container">
+      <div class="col-md-12 col-sm-12 col-12 p-2 ">
+        <table id="tblData" class="table table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Name</th>
+              <th>Alter Ego</th>
+              <th>Publisher</th>
+              <th>First Appearence</th>
+              <th>Publishing Year</th>
+              <th>Created By</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Table-Container: End -->
+
+  </div>
+  <script  src="/script.js"></script>
+</body>
+
+</html>
